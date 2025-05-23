@@ -113,6 +113,14 @@
         color: var(--primary);
         text-align: center;
       }
+
+      .result-header {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+      }
+
       .profile-name {
         display: block;
         font-size: 1.3em;
@@ -207,13 +215,20 @@
       }
       @media (max-width: 430px) {
         .isf-value {
-          font-size: 1.4em;
+          font-size: 2.4em;
+        }
+        header {
+          padding: 1.1rem;
         }
         header h1 {
           font-size: 1.4em;
         }
         .profile-name {
           font-size: 1em;
+        }
+        .form-section button {
+          display: block;
+          margin: 1em auto 0 auto;
         }
       }
 
@@ -271,12 +286,35 @@
       </form>
 
       <section class="result-section" id="resultSection">
-        <div class="isf-value" id="isfValue"></div>
-        <span class="profile-name" id="profileName"></span>
+        <div class="result-header">
+          <span class="isf-value" id="isfValue"></span>
+          <h2 class="profile-name profile-warning" id="profileName"></h2>
+        </div>
+
         <div class="animated-bar">
           <div class="bar-inner" id="barISF"></div>
         </div>
-        <div class="profile-desc" id="profileDesc"></div>
+
+        <p class="profile-tagline" id="profileTagline"></p>
+
+        <div class="profile-details">
+          <p>
+            <strong>✓ Características</strong><br />
+            <span id="profileCaracteristicas"></span>
+          </p>
+          <p>
+            <strong>⚠ Principais Desafios</strong><br />
+            <span id="profileDesafios"></span>
+          </p>
+          <p>
+            <strong>💭 Mentalidade</strong><br />
+            <span id="profileMentalidade"></span>
+          </p>
+          <p>
+            <strong>→ Próximo Passo</strong><br />
+            <span id="profileProximo"></span>
+          </p>
+        </div>
       </section>
 
       <section class="profile-list">
@@ -334,31 +372,54 @@
         {
           nome: "O Sobrevivente",
           faixa: [0, 20],
-          desc: "Situação: Vive no vermelho, dívidas constantes, ansiedade financeira.<br>Mentalidade: “Nunca sobra nada”, “Rico nasce pronto”.<br><b>Próximo passo:</b> Controle básico de gastos e quitar dívidas emergenciais.",
           class: "profile-danger",
+          caracteristicas:
+            "Dívidas constantes, conta no negativo, vive de salário em salário",
+          desafios:
+            "Juros de cartão, nome sujo, ansiedade financeira constante.",
+          mentalidade: "“Nunca sobra nada”, “Rico nasce pronto”.",
+          proximo:
+            "Controle básico de gastos e quitação de dívidas emergenciais.",
         },
         {
-          nome: "O Equilibrador",
+          nome: "O Equilibrista",
           faixa: [20, 40],
-          desc: "Situação: Paga as contas, mas não sobra nada. Qualquer imprevisto vira crise.<br>Mentalidade: “Pelo menos não devo”, “Investir é para quem ganha mais”.<br><b>Próximo passo:</b> Montar reserva e cortar vazamentos.",
           class: "profile-warning",
+          caracteristicas:
+            "Qualquer imprevisto vira crise, sem planejamento futuro.",
+          desafios: "Falta de reserva e gastos desnecessários.",
+          mentalidade:
+            "“Pelo menos não devo”, “Investir é para quem ganha mais”.",
+          proximo: "Criar reserva de emergência e cortar vazamentos.",
         },
         {
           nome: "O Poupador",
           faixa: [40, 60],
-          desc: "Situação: Guarda dinheiro, mas sem estratégia.<br>Mentalidade: “Poupança é seguro”, “Investir é arriscado”.<br><b>Próximo passo:</b> Diversificar investimentos e buscar educação financeira.",
           class: "profile-ok",
+          caracteristicas:
+            "Tem reserva na poupança, mas dinheiro não trabalha.",
+          desafios: "Dinheiro perdendo para inflação, medo de investir.",
+          mentalidade: "“Poupança é segura”, “Investimento é arriscado”.",
+          proximo: "Diversificar investimentos e educação financeira.",
         },
         {
           nome: "O Investidor",
           faixa: [60, 80],
-          desc: "Situação: Investe regularmente, pensa no futuro.<br>Mentalidade: “Meu dinheiro trabalha por mim”, “Tempo é meu aliado”.<br><b>Próximo passo:</b> Aportar mais e usar estratégias avançadas.",
           class: "profile-ok",
+          caracteristicas:
+            "Carteira diversificada, planeja aposentadoria, aporte mensal.",
+          desafios: "Otimizar rendimentos, acelerar independência.",
+          mentalidade:
+            "“Meu dinheiro trabalha para mim”, “Tempo é meu aliado”.",
+          proximo: "Aumentar aportes e estratégias avançadas.",
         },
         {
           nome: "O Livre",
           faixa: [80, 100],
-          desc: "Situação: Independência financeira!<br>Mentalidade: “Trabalho porque quero”, “Foco em impacto e legado”.<br><b>Próximo passo:</b> Expandir impacto e ajudar outros.",
+          caracteristicas: "Renda passiva cobre gastos, trabalha por escolha",
+          desafios: "Manter e crescer patrimônio, legado.",
+          mentalidade: "“Trabalho porque quero”, “Foco no impacto”.",
+          proximo: "Expandir impacto e ajudar outros a chegarem lá.",
           class: "profile-ok",
         },
       ];
@@ -396,20 +457,35 @@
         const pName = document.getElementById("profileName");
         pName.textContent = perfil.nome;
         pName.className = "profile-name " + perfil.class;
-        document.getElementById("profileDesc").innerHTML = perfil.desc;
+        // Divide o texto do perfil em partes usando <br> como separador
+        document.getElementById("profileCaracteristicas").textContent =
+          perfil.caracteristicas;
+        document.getElementById("profileDesafios").textContent =
+          perfil.desafios;
+        document.getElementById("profileMentalidade").textContent =
+          perfil.mentalidade;
+        document.getElementById("profileProximo").textContent = perfil.proximo;
 
         // Anima barra
         const bar = document.getElementById("barISF");
+        const novoValor = `${Math.min(isf, 100)}%`;
+
+        // Força a barra a voltar para 0% (com transição)
+        bar.style.transition = "none"; // remove transição
         bar.style.width = "0%";
-        setTimeout(() => {
-          bar.style.width = `${Math.min(isf, 100)}%`;
-        }, 150);
+
+        // Aguarda um frame para aplicar a transição
+        requestAnimationFrame(() => {
+          requestAnimationFrame(() => {
+            bar.style.transition =
+              "width 1.2s cubic-bezier(0.62, 0.28, 0.23, 0.99)";
+            bar.style.width = novoValor;
+          });
+        });
 
         document.getElementById("resultSection").classList.add("active");
         setTimeout(() => {
-          document
-            .getElementById("resultSection")
-            .scrollIntoView({ behavior: "smooth" });
+          document.getElementById("resultSection");
         }, 300);
       };
     </script>
