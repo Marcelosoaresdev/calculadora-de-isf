@@ -4,19 +4,26 @@ const perfis = [
     faixa: [0, 20],
     class: "profile-danger",
     caracteristicas:
-      "Dívidas constantes, conta no negativo, vive de salário em salário",
-    desafios: "Juros de cartão, nome sujo, ansiedade financeira constante.",
-    mentalidade: "“Nunca sobra nada”, “Rico nasce pronto”.",
-    proximo: "Controle básico de gastos e quitação de dívidas emergenciais.",
+      "Dívidas constantes, conta no negativo, vive de salário em salário. A renda mensal é totalmente consumida por despesas básicas, empréstimos ou parcelas, sem espaço para planejamento. Qualquer imprevisto representa um risco real de colapso financeiro.",
+    desafios:
+      "Enfrenta juros abusivos, nome negativado e uma sensação constante de aperto financeiro. A instabilidade emocional é grande, com impactos diretos na saúde e nos relacionamentos. O ciclo de endividamento tende a se perpetuar se não houver intervenção.",
+    mentalidade:
+      "Predomina a crença de que 'dinheiro nunca dá', que 'a vida é assim mesmo' ou que 'quem nasce pobre vai morrer pobre'. Há desmotivação para mudar porque o foco está em sobreviver ao mês atual.",
+    proximo:
+      "É essencial retomar o controle básico das finanças, entender para onde o dinheiro está indo, cortar desperdícios, renegociar dívidas e iniciar um plano para sair do vermelho. A organização e a educação financeira são os primeiros passos para quebrar o ciclo.",
   },
   {
     nome: "O Equilibrista",
     faixa: [20, 40],
     class: "profile-warning",
-    caracteristicas: "Qualquer imprevisto vira crise, sem planejamento futuro.",
-    desafios: "Falta de reserva e gastos desnecessários.",
-    mentalidade: "“Pelo menos não devo”, “Investir é para quem ganha mais”.",
-    proximo: "Criar reserva de emergência e cortar vazamentos.",
+    caracteristicas:
+      "Consegue pagar as contas em dia e evita dívidas, mas vive no limite. Qualquer imprevisto — como um conserto de carro ou uma conta médica — causa desajuste. O planejamento de longo prazo ainda não existe, e o orçamento costuma ser apertado.",
+    desafios:
+      "Não consegue formar uma reserva de emergência. Pequenas decisões impulsivas geram desperdício de dinheiro, que poderia ser melhor direcionado. Falta clareza sobre metas financeiras e o hábito de poupar ainda não está consolidado.",
+    mentalidade:
+      "Há uma sensação de alívio por não estar endividado, mas também uma resistência a investir por acreditar que isso exige muito dinheiro ou conhecimento. Frases como 'pelo menos estou em dia' ou 'investimento é coisa de rico' são comuns.",
+    proximo:
+      "O caminho envolve mapear os gastos com mais precisão, cortar vazamentos financeiros, criar uma reserva de emergência e começar a entender como funciona o mundo dos investimentos. A mudança de mentalidade é tão importante quanto a ação prática.",
   },
   {
     nome: "O Poupador",
