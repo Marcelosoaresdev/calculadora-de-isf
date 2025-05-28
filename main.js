@@ -23,26 +23,26 @@ const perfis = [
     faixa: [40, 60],
     class: "profile-ok",
     caracteristicas:
-      "Neste estágio, uma reserva financeira já foi construída, trazendo certa tranquilidade. No entanto, o dinheiro pode estar parado ou rendendo pouco, e a segurança da poupança pode dar a sensação de que não é preciso avançar mais.",
+      "O hábito de gastar menos do que ganha já é um grande passo. Existe uma preocupação em construir reservas e manter certa organização financeira, mas o potencial de crescimento do dinheiro pode não estar sendo explorado plenamente.",
     desafios:
-      "O desafio é perceber que só acumular não basta: a inflação pode corroer o valor guardado e o medo de investir pode limitar conquistas futuras.",
+      "Identificar oportunidades para que o dinheiro guardado renda mais e proteger-se contra a desvalorização do tempo e da inflação. Sair da zona de conforto do simples acúmulo e buscar novas formas de fazer o patrimônio evoluir.",
     mentalidade:
-      "A busca por segurança predomina, ainda que isso signifique abrir mão de maiores ganhos. Investimentos diferentes da poupança ainda parecem arriscados ou distantes da realidade.",
+      "A disciplina financeira está melhorando, surge a vontade de avançar, aprender mais sobre investimentos e entender como o dinheiro pode trabalhar de forma mais ativa para o futuro.",
     proximo:
-      "O próximo passo envolve buscar mais conhecimento sobre investimentos, superar crenças limitantes e diversificar para que o dinheiro realmente trabalhe a seu favor.",
+      "O próximo passo pode envolver ampliar o conhecimento sobre diferentes tipos de investimento e dar os primeiros passos fora do básico, buscando mais autonomia e segurança para o futuro.",
   },
   {
     nome: "O Investidor",
     faixa: [60, 80],
     class: "profile-ok",
     caracteristicas:
-      "Aqui, investir já faz parte da rotina: existe uma carteira, há planejamento e os aportes são constantes. Ainda assim, alcançar a verdadeira independência financeira pode depender de refinar estratégias e manter a disciplina ao longo do tempo.",
+      "Neste estágio, os recursos disponíveis permitem ir além da reserva de emergência. Surge o interesse em usar o dinheiro para conquistar objetivos maiores, seja aprendendo sobre investimentos, buscando novas opções ou dando os primeiros passos fora da poupança.",
     desafios:
-      "A necessidade de otimizar rendimentos e acelerar a jornada pode surgir. Novas dúvidas aparecem: será que a estratégia atual é a melhor para seus objetivos? É hora de revisar planos e buscar mais eficiência.",
+      "Consolidar hábitos de investimento e ampliar o conhecimento sobre diferentes produtos financeiros. A ansiedade com oscilações e o medo de perder dinheiro podem aparecer, assim como a dúvida sobre onde e como investir melhor.",
     mentalidade:
-      "O entendimento de que o tempo e os juros compostos são aliados já está presente. O foco se volta para o longo prazo e para o aumento do patrimônio.",
+      "O olhar se volta para o longo prazo, com o desejo de ver o dinheiro crescer de verdade. A ideia de que o dinheiro pode trabalhar a favor já faz parte do pensamento, mesmo que ainda existam dúvidas e inseguranças.",
     proximo:
-      "Aprofundar-se em estratégias avançadas, aumentar os aportes e manter-se informado podem ser caminhos para transformar planos em realizações concretas.",
+      "Aprofundar o aprendizado, experimentar novas estratégias e buscar mais informação ajudam a transformar intenção em prática e a aumentar a confiança como investidor.",
   },
   {
     nome: "O Livre",
