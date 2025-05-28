@@ -4,8 +4,7 @@ Um aplicativo web simples e responsivo para ajudar usuários a descobrirem seu *
 
 ## 📸 Demonstração
 
-<!-- Substitua 'preview.png' por uma imagem real se quiser -->
-![Preview do ISF](preview.png)
+![Preview do ISF](./assets/preview.png)
 
 ## 🚀 Funcionalidades
 
@@ -23,17 +22,17 @@ Um aplicativo web simples e responsivo para ajudar usuários a descobrirem seu *
 ## 🧮 Como o ISF é calculado?
 
 text
-ISF = ((Renda - Gastos Essenciais) / Renda) * 100
+ISF = ((Renda - Gastos Essenciais) / Renda) \* 100
 Quanto maior o ISF, melhor a saúde financeira. O valor é arredondado e limitado entre 0% e 100%.
 
 ## 🛠️ Tecnologias Utilizadas
 
-| Tecnologia     | Descrição                                                       |
-|----------------|-----------------------------------------------------------------|
-| **HTML5**      | Estrutura da página, com elementos semânticos e acessíveis.     |
-| **CSS3**       | Estilização com variáveis, animações, media queries e responsividade. |
-| **JavaScript** | Lógica de cálculo do ISF, manipulação do DOM e interatividade.  |
-| **Google Fonts** | Fonte personalizada (Montserrat) via CDN.                    |
+| Tecnologia       | Descrição                                                             |
+| ---------------- | --------------------------------------------------------------------- |
+| **HTML5**        | Estrutura da página, com elementos semânticos e acessíveis.           |
+| **CSS3**         | Estilização com variáveis, animações, media queries e responsividade. |
+| **JavaScript**   | Lógica de cálculo do ISF, manipulação do DOM e interatividade.        |
+| **Google Fonts** | Fonte personalizada (Montserrat) via CDN.                             |
 
 ---
 
@@ -42,17 +41,18 @@ Quanto maior o ISF, melhor a saúde financeira. O valor é arredondado e limitad
 1. Clone o repositório:
    ```bash
    git clone https://github.com/seu-usuario/isf-financeiro.git
+   ```
 2. Acesse a pasta:
-    ```bash
-    cd isf-financeiro
+   ```bash
+   cd isf-financeiro
+   ```
 3. Abra o arquivo index.html no navegador:
-    - Clique duas vezes no arquivo
-    - Ou arraste-o para uma aba do navegador
-
+   - Clique duas vezes no arquivo
+   - Ou arraste-o para uma aba do navegador
 
 ## 📂 Estrutura do Projeto
 
 📂 isf-financeiro
-├── index.html         # Página principal
-├── README.md          # Documentação
-└── preview.png        # Imagem de exemplo
+├── index.html # Página principal
+├── README.md # Documentação
+└── preview.png # Imagem de exemplo
